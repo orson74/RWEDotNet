@@ -73,6 +73,9 @@
   <ItemGroup>
     <EmbeddedResource Include="ResponseMock\AcknowledgeResponse.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ResponseMock\GetEntitiesResponse.xml" />
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

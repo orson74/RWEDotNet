@@ -14,5 +14,15 @@ namespace MySmartHome.Framework.RWE.NET.Test
             LogicalDeviceStateManager stateManager = new LogicalDeviceStateManager(requestHandler);
             Assert.AreEqual(17, stateManager.LogicalDeviceStates.Count,"Es wurde nicht die erwartete Anzahl an Geräten ermittelt");
         }
+
+        [TestMethod]
+        public void TestGetEntitiesResponse()
+        {
+            var requestHandler = new MockRequestHandler();
+            var entityManager = new EntityManager(requestHandler);
+
+            Assert.AreEqual(5, entityManager.Locations.Count);
+            Assert.AreEqual(30, entityManager.LogicalDevices.Count);
+        }
     }
 }

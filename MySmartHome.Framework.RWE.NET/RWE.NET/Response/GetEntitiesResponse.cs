@@ -10,15 +10,15 @@ namespace RWE.NET.Response
 
   public class GetEntitiesResponse : BaseResponse
   {
-    [XmlElement("LCs")]
-    public List<Location> Locations { get; set; }
+    [XmlArray("LCs"), XmlArrayItem(ElementName = "LC", Type = typeof(Location))]
+    public virtual List<Location> Locations { get; set; }
     [XmlElement("BDs")]
-    public Object BaseDevices { get; set; }
-    [XmlElement("LDs")]
-    public List<LogicalDevice> LogicalDevices { get; set; }
+    public virtual Object BaseDevices { get; set; }
+    [XmlArray("LDs"), XmlArrayItem(ElementName = "LD", Type = typeof(LogicalDevice))]
+    public virtual List<LogicalDevice> LogicalDevices { get; set; }
     [XmlElement("PFs")]
-    public List<Profile> Profiles { get; set; }
+    public virtual List<Profile> Profiles { get; set; }
     [XmlElement("AcCts")]
-    public Object ActuatorContainers { get; set; }
+    public virtual Object ActuatorContainers { get; set; }
   }
 }

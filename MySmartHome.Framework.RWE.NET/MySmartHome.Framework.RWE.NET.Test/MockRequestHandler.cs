@@ -32,6 +32,9 @@ namespace MySmartHome.Framework.RWE.NET.Test
                 case "NotificationRequest":
                     return base.deserialize<TResponse>(GetInputFile("AcknowledgeResponse.xml"));
 
+                case "GetEntitiesRequest":
+                    return base.deserialize<TResponse>(GetInputFile("GetEntitiesResponse.xml"));
+
 
             }
             return default(TResponse);

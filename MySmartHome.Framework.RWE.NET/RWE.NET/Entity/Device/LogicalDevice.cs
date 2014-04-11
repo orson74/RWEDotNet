@@ -19,6 +19,7 @@ namespace RWE.NET.Entity.Device
    XmlInclude(typeof(ValveActuator)),
    XmlInclude(typeof(VirtualResidentSensor)),
    XmlInclude(typeof(WindowDoorSensor))]
+  [XmlRoot("LD")]
   public class LogicalDevice
   {
     [XmlElement("Id")]
