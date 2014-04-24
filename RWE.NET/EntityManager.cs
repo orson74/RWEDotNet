@@ -14,7 +14,7 @@ namespace RWE.NET
   /// <author>Marko Geißler (marko.geissler@googlemail.com)</author>
   public class EntityManager
   {
-    List<LogicalDevice> logicalDevices;
+	List<LogicalDevice> logicalDevices;
     List<Location> locations;
     List<Profile> profiles;
     IRequestHandler requestHandler;
@@ -32,9 +32,9 @@ namespace RWE.NET
       };
 
       GetEntitiesResponse response = requestHandler.RequestResponse<GetEntitiesRequest, GetEntitiesResponse>(request);
-      logicalDevices = response.LogicalDevices;
-      locations = response.Locations;
-      profiles = response.Profiles;
+	  logicalDevices = response.LogicalDevices;
+	  locations = response.Locations;
+	  profiles = response.Profiles;
     }
 
     /// <summary>

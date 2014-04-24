@@ -51,7 +51,6 @@
     <Compile Include="Entity\AlarmActuatorState.cs" />
     <Compile Include="Entity\Device\Actuator.cs" />
     <Compile Include="Entity\Device\DimmerActuator.cs" />
-    <Compile Include="Entity\Device\SmokeDetectionSensor.cs" />
     <Compile Include="Entity\Device\WindowDoorSensor.cs" />
     <Compile Include="Entity\DimmerActuatorState.cs" />
     <Compile Include="Entity\LuminanceSensorState.cs" />
@@ -61,7 +60,9 @@
     <Compile Include="Entity\Profiles\Profile.cs" />
     <Compile Include="Entity\OffSettings\DefaultOffSettings.cs" />
     <Compile Include="Entity\OffSettings\GenericActuatorSettings.cs" />
-    <Compile Include="Entity\OffSettings\RoomTemperatureActuatorSettings.cs" />
+    <Compile Include="Entity\OffSettings\RoomTemperatureActuatorSettings.cs">
+      <DependentUpon>AlarmActuatorSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entity\OffSettings\SwitchActuatorSettings.cs" />
     <Compile Include="Entity\Device\GenericActuator.cs" />
     <Compile Include="Entity\Device\HumiditySensor.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Entity\RoomTemperatureActuatorState.cs" />
     <Compile Include="Entity\RoomTemperatureSensorState.cs" />
     <Compile Include="Entity\SwitchActuatorState.cs" />
+    <Compile Include="Entity\LogicalDeviceStatesChangedNotification.cs" />
     <Compile Include="Exception\RWEExceptions.cs" />
     <Compile Include="RequestHandler.cs" />
     <Compile Include="Request\GetEntitiesRequest.cs" />
@@ -104,11 +106,17 @@
     <Compile Include="Response\ControlResultResponse.cs" />
     <Compile Include="Response\GenericSHCErrorResponse.cs" />
     <Compile Include="Response\GetAllLogicalDeviceStatesResponse.cs" />
-    <Compile Include="Entity\LogicalDeviceStatesChangedNotification.cs" />
     <Compile Include="Response\GetEntitiesResponse.cs" />
     <Compile Include="Response\LoginResponse.cs" />
     <Compile Include="Response\NotificationList.cs" />
     <Compile Include="RWEEvent\Events.cs" />
+    <Compile Include="Entity\Device\MotionDetectionSensor.cs" />
+    <Compile Include="Entity\Device\LuminanceSensor.cs" />
+    <Compile Include="Entity\OffSettings\DimmerActuatorSettings.cs" />
+    <Compile Include="Entity\Device\AlarmActuator.cs" />
+    <Compile Include="Entity\OffSettings\AlarmActuatorSettings.cs" />
+    <Compile Include="Entity\Device\SmokeDetectorSensor.cs" />
+    <Compile Include="Entity\Device\GenericSensor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="license.txt" />

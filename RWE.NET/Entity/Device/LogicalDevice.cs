@@ -11,14 +11,18 @@ namespace RWE.NET.Entity.Device
    XmlInclude(typeof(RoomHumiditySensor)),
    XmlInclude(typeof(RoomTemperatureSensor)),
    XmlInclude(typeof(RoomTemperatureActuator)),
-   XmlInclude(typeof(SmokeDetectionSensor)),
+   XmlInclude(typeof(SmokeDetectorSensor)),
    XmlInclude(typeof(SwitchActuator)),
    XmlInclude(typeof(ThermostatActuator)),
    XmlInclude(typeof(TemperatureSensor)),
    XmlInclude(typeof(TimerSensor)),
    XmlInclude(typeof(ValveActuator)),
    XmlInclude(typeof(VirtualResidentSensor)),
-   XmlInclude(typeof(WindowDoorSensor))]
+   XmlInclude(typeof(WindowDoorSensor)),
+   XmlInclude(typeof(MotionDetectionSensor)),
+   XmlInclude(typeof(LuminanceSensor)),
+   XmlInclude(typeof(AlarmActuator))]
+  [XmlInclude(typeof(GenericSensor))]
   public class LogicalDevice
   {
     [XmlElement("Id")]

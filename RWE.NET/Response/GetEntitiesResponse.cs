@@ -8,17 +8,17 @@ namespace RWE.NET.Response
   using RWE.NET.Entity.Device;
   using RWE.NET.Entity.Profiles;
 
-  public class GetEntitiesResponse : BaseResponse
-  {
-    [XmlElement("LCs")]
-    public List<Location> Locations { get; set; }
-    [XmlElement("BDs")]
-    public Object BaseDevices { get; set; }
-    [XmlElement("LDs")]
-    public List<LogicalDevice> LogicalDevices { get; set; }
-    [XmlElement("PFs")]
-    public List<Profile> Profiles { get; set; }
-    [XmlElement("AcCts")]
-    public Object ActuatorContainers { get; set; }
-  }
+	public class GetEntitiesResponse : BaseResponse
+	{
+		[XmlArray("LCs"), XmlArrayItem(ElementName = "LC", Type = typeof(Location))]
+		public virtual List<Location> Locations { get; set; }
+		[XmlElement("BDs")]
+		public virtual Object BaseDevices { get; set; }
+		[XmlArray("LDs"), XmlArrayItem(ElementName = "LD", Type = typeof(LogicalDevice))]
+		public virtual List<LogicalDevice> LogicalDevices { get; set; }
+		[XmlElement("PFs")]
+		public virtual List<Profile> Profiles { get; set; }
+		[XmlElement("AcCts")]
+		public virtual Object ActuatorContainers { get; set; }
+	}
 }

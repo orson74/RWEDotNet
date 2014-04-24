@@ -5,7 +5,7 @@ using System.Xml.Serialization;
 
 namespace RWE.NET.Entity
 {
-	[XmlInclude(typeof(WindowDoorSensorState)),
+  [XmlInclude(typeof(WindowDoorSensorState)),
    XmlInclude(typeof(SmokeDetectionSensorState)),
    XmlInclude(typeof(SwitchActuatorState)),
    XmlInclude(typeof(RoomTemperatureActuatorState)),
