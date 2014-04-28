@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RWE.NET.Entity.Device
 {
+	/// <summary>
+	/// Temperature sensor.
+	/// </summary>
     public class TemperatureSensor : LogicalDevice
     {
         public List<Guid> UnderlyingDevicesIds { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RWE.NET.Entity.Device
 {
-	public class AlarmActuator : LogicalDevice
+	public class AlarmActuator : Actuator
 	{
 	}
 }
