@@ -1,0 +1,7 @@
+*.dll
+*.mdb
+*/obj/*
+*/bin/*
+RWE.NET/bin/Debug/RWE.NET.dll
+RWE.NET/bin/Debug/RWE.NET.dll.mdb
+RWE.NET/MySmartHome.Framework.RWE.NET.csproj
